@@ -87,7 +87,7 @@ makePost(function () {
 }, (postText) => `Your post has been successfully created! Here is the post that you made:\n\n${postText}`);
 */
 
-function comments (comment){
+/*function comments (comment){
     const users = comment();
     console.log(users);
 }
@@ -146,3 +146,29 @@ function outerFunction() {
 
 outerFunction();
 */
+
+/*const contact =[  { name: "Alice Johnson", phoneNumber: "555-0101" },
+  { name: "Bob Smith", phoneNumber: "555-0102" },
+  { name: "Carol Williams", phoneNumber: "555-0103" },
+  { name: "David Brown", phoneNumber: "555-0104" },
+  { name: "Emma Davis", phoneNumber: "555-0105" },
+  { name: "Frank Miller", phoneNumber: "555-0106" },
+  { name: "Grace Lee", phoneNumber: "555-0107" },
+  { name: "Henry Wilson", phoneNumber: "555-0108" },
+  { name: "Iris Martinez", phoneNumber: "555-0109" },
+  { name: "Jack Taylor", phoneNumber: "555-0110" }
+]
+*/
+
+ let count = 0;
+ while(count < 20){
+    if(count * 3 === 30){
+        console.log(`this is your answer ${count}`)
+    }
+    count ++;
+ }
+ 
+
+
+
+ 
