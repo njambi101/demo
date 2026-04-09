@@ -78,3 +78,48 @@ let rese = Array.prototype.map.call(s, function (item) {
 
 console.log(rese)
 */
+
+//the filter() method is used to create a new array containing elements that satisfy a specified condition.it does not change the original array.
+/*function bar(age){
+    return age >= 18;
+}
+let bars = [22,45,17,18,19,14,12,13,30].filter(bar);
+console.log(bars)
+
+function names(isnames){
+    return isnames === 'grace';
+}
+let fName =['grace', 'njambi', 'wambui', 'robinson'].filter(names);
+console.log(fName)
+
+function isEven(value) {
+    return value % 2 ==0;
+}
+
+let filterd =[10,11,34,27,87].filter(isEven);
+console.log(filterd);y
+*/
+//forEach() method 
+/*const nums =[3,2,4,5,6,7,8];
+nums.forEach((n) => console.log(n* 3))
+console.log(nums.length)
+*/
+//find() functionreturns the first element in an array that satisfies a given condition;
+ /*const n = [1, 4, 3, 4, 5];
+const fEven = n.find((num) => num % 2 === 0);
+console.log(fEven);
+*/
+//some() function checks if atleast one array condition satisfies the condition;
+/*const n = [1, 2, 3, 4, 5];
+const hasNeg = n.some((num) => num < 0);
+console.log(hasNeg);
+*/
+//every()checks if all aray conditions satisfies a condition;
+/*const n = [1, 2, 3, 4, 5];
+const hasNeg = n.some((num) => num < 0);
+console.log(hasNeg);
+*/
+
+//FUNCTION COMPOSITION is the process of combining multiple functions to create a new function;
+
+
