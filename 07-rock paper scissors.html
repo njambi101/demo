@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07rock paper scissors</title> 
+</head>
+<body>
+    <h3>rock paper scissors</h3>
+    <button onclick="
+   playgame('rock');"    
+     >rock</button>
+   
+    <button onclick="
+      playgame('paper');"
+
+    >paper</button>
+
+
+    <button onclick="    
+    playgame('scissors');"
+    >scissors </button>
+    <script>
+       
+    function playgame(playerMove){
+        
+        const moves = playwithme();
+            let persons = '';
+        if (playerMove === 'rock'){
+        
+        if (moves === 'rock') {
+            persons = 'you loose';
+        } else if (moves === 'paper') {
+            persons = ' sorry you lose';
+        } else if (moves === 'scissors') {
+            persons = ' congrats you win';
+
+        }
+    }else if (playerMove === 'paper') {
+        if (moves === 'rock') {
+            persons = ' congrats you win';
+        } else if (moves === 'paper') {
+            persons = 'you loose';
+        } else if (moves === 'scissors') {
+            persons = ' sorry you lose';
+
+        }
+
+    }else if (playerMove === 'rock') {
+        if (moves === 'rock') {
+            persons = 'you loose';
+        } else if (moves === 'paper') {
+            persons = ' congrats you win';
+        } else if (moves === 'scissors') {
+            persons = ' sorry you lose';
+
+        }
+    }
+        alert(`you picked ${playerMove} and the computer picked ${moves}, ${persons} thankyou for playing😊`); 
+
+    
+    }          
+    function playwithme(){
+            let moves = '';
+              const choices = Math.random();
+            if (choices >= 0 && choices < 1 / 3) {
+                moves = 'paper';
+            } else if (choices >= 1 / 3 && choices < 2 / 3) {
+                moves = 'rock';
+            } else if (choices >= 2 / 3 && choices < 1) {
+                moves = 'scissors';
+            };   
+
+            return moves;
+        }
+
+    </script>
+</body>
+</html>
+
