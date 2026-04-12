@@ -10,6 +10,7 @@
     <button onclick="
     calculation += '1';
         console.log(calculation);
+        
         ">1</button>
     <button onclick="
     calculation += '2';
@@ -57,7 +58,11 @@
     ">.</button>
     <button onclick="
     calculation = eval(calculation);
-    console.log(calculation)">=</button>
+    console.log(calculation)
+     localStorage.setItem('calculation', JSON.stringify(calculation));
+        let storedCalculation = JSON.parse(localStorage.getItem('calculation'));
+        console.log(storedCalculation);
+    alert(calculation))">=</button>
     <button onclick="
     calculation = '';
     console.log(calculation)">clear</button>
@@ -65,6 +70,8 @@
     <script>
         
         let calculation = '';
+       
+        
     </script>
 </body>
 
