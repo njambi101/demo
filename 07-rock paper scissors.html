@@ -90,7 +90,7 @@
  document.querySelector('.js-message').innerHTML = `computer picked ${moves} and you picked ${playerMove}`;
     localStorage.setItem('score', JSON.stringify(score));
     answer = JSON.parse(localStorage.getItem('score'));
-    document.querySelector('.js-score').textContent = `wins: ${answer.wins}, losses: ${answer.losses}, ties: ${answer.ties}`;
+    document.querySelector('.js-score').textContent = `wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}`;
 
     
   
