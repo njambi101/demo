@@ -27,16 +27,19 @@
         score.wins = 0;
         score.losses = 0;
         score.ties = 0;  
-        localStorage.removeItem('score');     
-
+        
     alert('score reset');
         
         ">reset</button>
+        <p  class = 'js-score'></p>
     <script>
-       const score = JSON.parse(localStorage.getItem('score')) 
-       console.log(score);
-       
-        
+        const score = {
+            wins: 0,
+            losses: 0,
+            ties: 0
+        };
+     
+
     function playgame(playerMove){
         
         const moves = playwithme();
@@ -79,14 +82,12 @@
         score.ties += 1;
     }
 
-    localStorage.setItem('score', JSON.stringify(score)) || {
-            wins: 0,
-            losses: 0,
-            ties: 0,
-        };
-         
-    
   
+ 
+    localStorage.setItem('score', JSON.stringify(score));
+    answer = JSON.parse(localStorage.getItem('score'));
+    document.querySelector('.js-score').textContent = `wins: ${answer.wins}, losses: ${answer.losses}, ties: ${answer.ties}`;
+
     
     alert(`you picked ${playerMove} and the computer picked ${moves}, ${persons} thankyou for playing😊
 ${score.wins} wins, ${score.losses} losses, ${score.ties} ties`)

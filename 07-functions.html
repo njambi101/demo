@@ -7,11 +7,16 @@
 </head>
 <body>
     <h3>Guess the Number</h3>
-    <p>Guess a number between 1 and 10:</p>
-    <button >click to get a random number</button>
+    <p class="js-house">Guess a number between 1 and 10:</p>
+    <button class ="js-button" >click to get a random number</button>
 
 </body>
 <script>
+    document.querySelector('.js-button').addEventListener('click', function() {
+        const randomNumber = Math.floor(Math.random() * 10) + 1;
+        document.querySelector('.js-house').textContent = `The random number is: ${randomNumber}`;
+    });
+
 /*    function greet(name)  {
         if (!name) {
             console.log('Hello, stranger!');
