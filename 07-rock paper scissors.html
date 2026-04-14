@@ -86,10 +86,12 @@
         score.ties += 1;
     }
 
+     localStorage.setItem('score', JSON.stringify(score));
+        answer = JSON.parse(localStorage.getItem('score'));
+
   document.querySelector('.js-answers').innerHTML = persons;
- document.querySelector('.js-message').innerHTML = `computer picked ${moves} and you picked ${playerMove}`;
-    localStorage.setItem('score', JSON.stringify(score));
-    answer = JSON.parse(localStorage.getItem('score'));
+    document.querySelector('.js-message').innerHTML = `computer picked ${moves} and you picked ${playerMove}`;
+   
     document.querySelector('.js-score').textContent = `wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}`;
 
     
