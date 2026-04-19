@@ -63,21 +63,20 @@ var mcqList = [
     let userAnswer = readlineSync.keyInSelect(listOfAnswers, question);
 
     if(listOfAnswers[userAnswer] === answer){
-    console.log(`🥳🥳🥳  good work ${answer} is correct.`);
+    console.log(chalk.green(`🥳🥳🥳  good work ${answer} is correct.`));
     score = score + 2;
   }else{
     console.log('You are Wrong.');
-    console.log(`💀💀💀 sorry, The Correct Answer is: ${answer}`);
+    console.log(chalk.red(`💀💀💀 sorry, The Correct Answer is: ${answer}`));
     score = score - 1;
   }
 
   if(score < 0){
     score = 0;
   }
-  console.log(chalk.cyan(`Score is: ${score}`));
-
+  console.log(chalk.yellow(`Score is: ${score}`));
+ 
 }
-
 
 for(var i = 0;i < mcqList.length; i++){
   console.log('\n');
