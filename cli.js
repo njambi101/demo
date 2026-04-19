@@ -1,10 +1,5 @@
 #!/usr/bin/env node
 import chalk from 'chalk';
-import inquirer from 'inquirer';
-import gradient from 'gradient-string';
-import chalkAnimation from 'chalk-animation';
-import figlet from 'figlet';
-import { createSpinner } from 'nanospinner';
 
 import {createRequire} from 'module';
 import readlineSync from 'readline-sync';
@@ -16,10 +11,10 @@ let username = readlineSync.question("What's your Name: \n");
 
 console.log(`Hello  ${ username}  , Let's Play the Quiz!!`);
 console.log('Rules & Instructions: ');
-console.log(`1 ${username} , There are 10 Questions on India and all are Compulsory.`);
+console.log(`1 ${username} , There are 6  Questions  and all are Compulsory.`);
 console.log('2. You will get 2 points on each Right Answer.');
 console.log('3. One Point will be deducted if the Answer is Wrong.');
-console.log('4. In MCQ based questions you have to type the Serial Number / Index Value.');
+console.log('4. In MCQ based questions you have to type  Number 1 to 4 .');
 
 let score = 0;
 
@@ -64,11 +59,11 @@ var mcqList = [
 
     if(listOfAnswers[userAnswer] === answer){
     console.log(chalk.green(`🥳🥳🥳  good work ${answer} is correct.`));
-    score = score + 2;
+    score  += 2;
   }else{
     console.log('You are Wrong.');
     console.log(chalk.red(`💀💀💀 sorry, The Correct Answer is: ${answer}`));
-    score = score - 1;
+    score  -= 1;
   }
 
   if(score < 0){
